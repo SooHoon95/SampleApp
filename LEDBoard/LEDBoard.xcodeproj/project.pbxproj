@@ -16,6 +16,7 @@
 		BDAB45AA2920B47C009C0052 /* LEDBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB45A92920B47C009C0052 /* LEDBoardTests.swift */; };
 		BDAB45B42920B47C009C0052 /* LEDBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB45B32920B47C009C0052 /* LEDBoardUITests.swift */; };
 		BDAB45B62920B47C009C0052 /* LEDBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB45B52920B47C009C0052 /* LEDBoardUITestsLaunchTests.swift */; };
+		BDAB45C32920BAC2009C0052 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB45C22920BAC2009C0052 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BDAB45AF2920B47C009C0052 /* LEDBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEDBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAB45B32920B47C009C0052 /* LEDBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDBoardUITests.swift; sourceTree = "<group>"; };
 		BDAB45B52920B47C009C0052 /* LEDBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDAB45C22920BAC2009C0052 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BDAB459B2920B47B009C0052 /* Assets.xcassets */,
 				BDAB459D2920B47B009C0052 /* LaunchScreen.storyboard */,
 				BDAB45A02920B47B009C0052 /* Info.plist */,
+				BDAB45C22920BAC2009C0052 /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				BDAB45972920B47A009C0052 /* ViewController.swift in Sources */,
 				BDAB45932920B47A009C0052 /* AppDelegate.swift in Sources */,
 				BDAB45952920B47A009C0052 /* SceneDelegate.swift in Sources */,
+				BDAB45C32920BAC2009C0052 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
