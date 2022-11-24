@@ -10,11 +10,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        didSet {
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.loadTasks()
     }
 
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
@@ -48,8 +54,33 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion:  nil)
     }
     
+    func saveTasks() {
+        
+        // 배열의 요소를 dictionary 형태로 맵핑
+        let data = self.tasks.map {
+            [
+                "title" : $0.title,
+                "done" : $0.done
+            ]
+        }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "tasks")
+    }
     
-}
+    func loadTasks() {
+        let userDefaults = UserDefaults.standard
+        // 저장된 데이터 불러오기
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String: Any]] else { return }
+        // 다시 tasks 배열에 저장
+        self.tasks = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil } // 타입 변환 실패시 return nil
+            guard let done = $0["done"] as? Bool else { return nil }
+            return Task(title: title, done: done)
+        }
+    }
+    
+    
+}//
 
 
 extension ViewController: UITableViewDataSource {
@@ -67,9 +98,25 @@ extension ViewController: UITableViewDataSource {
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
         
+        if task.done {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
         return cell
     }
     // 여기까지
 }
 
 
+extension ViewController : UITableViewDelegate {
+    // 어떤 셀이 선택돼었는지 알려주는 메소드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 할일 체크하기
+        var task = self.tasks[indexPath.row]
+        task.done = !task.done
+        self.tasks[indexPath.row] = task
+        // 선택된 셀만 리로드
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+}
