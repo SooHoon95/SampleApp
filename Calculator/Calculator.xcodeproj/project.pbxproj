@@ -16,6 +16,7 @@
 		BD43D8D42921115C00D2513D /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43D8D32921115C00D2513D /* CalculatorTests.swift */; };
 		BD43D8DE2921115C00D2513D /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43D8DD2921115C00D2513D /* CalculatorUITests.swift */; };
 		BD43D8E02921115C00D2513D /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD43D8DF2921115C00D2513D /* CalculatorUITestsLaunchTests.swift */; };
+		BDBECD90292D098E00C28EFB /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBECD8F292D098E00C28EFB /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BD43D8D92921115C00D2513D /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD43D8DD2921115C00D2513D /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		BD43D8DF2921115C00D2513D /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDBECD8F292D098E00C28EFB /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BD43D8C52921115B00D2513D /* Assets.xcassets */,
 				BD43D8C72921115B00D2513D /* LaunchScreen.storyboard */,
 				BD43D8CA2921115B00D2513D /* Info.plist */,
+				BDBECD8F292D098E00C28EFB /* RoundButton.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBECD90292D098E00C28EFB /* RoundButton.swift in Sources */,
 				BD43D8C12921115A00D2513D /* ViewController.swift in Sources */,
 				BD43D8BD2921115A00D2513D /* AppDelegate.swift in Sources */,
 				BD43D8BF2921115A00D2513D /* SceneDelegate.swift in Sources */,
