@@ -16,15 +16,29 @@ class ViewController: UIViewController {
         }
     }
     
+    // String 으로 생성한다. 버튼 재사용을 위해서
+    @IBOutlet var editButton: UIBarButtonItem!
+    var doneButton: UIBarButtonItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTap))
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.loadTasks()
     }
 
+    // selector 함수 구현
+    @objc func doneButtonTap() {
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: false)
+    }
+    
+    
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
-        
+        guard !self.tasks.isEmpty else { return }
+        self.navigationItem.leftBarButtonItem = self.doneButton
+        self.tableView.setEditing(true, animated: true)
     }
     
     @IBAction func tapAddButton(_ sender: UIBarButtonItem) {
@@ -106,6 +120,29 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
     // 여기까지
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if self.tasks.isEmpty {
+            self.doneButtonTap()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+        
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // 재정렬된 순서대로 배열을 재정렬
+        var tasks = self.tasks
+        let task = tasks[sourceIndexPath.row]
+        tasks.remove(at: sourceIndexPath.row)   // 기존 배열에서 지우고
+        tasks.insert(task, at: destinationIndexPath.row)    // 같은 자리에 새로운 데이터 삽입
+        self.tasks = tasks
+    }
 }
 
 
