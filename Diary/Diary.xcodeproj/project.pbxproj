@@ -19,6 +19,7 @@
 		BD46519F293309BA0021E780 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46519E293309BA0021E780 /* DiaryCell.swift */; };
 		BD4651A1293309F60021E780 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A0293309F60021E780 /* StarViewController.swift */; };
 		BD4651A329330B330021E780 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A229330B330021E780 /* StarCell.swift */; };
+		BD4651A529330FCB0021E780 /* WriteDiaryViewCnotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A429330FCB0021E780 /* WriteDiaryViewCnotroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BD46519E293309BA0021E780 /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
 		BD4651A0293309F60021E780 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		BD4651A229330B330021E780 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		BD4651A429330FCB0021E780 /* WriteDiaryViewCnotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewCnotroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				BD46519E293309BA0021E780 /* DiaryCell.swift */,
 				BD4651A0293309F60021E780 /* StarViewController.swift */,
 				BD4651A229330B330021E780 /* StarCell.swift */,
+				BD4651A429330FCB0021E780 /* WriteDiaryViewCnotroller.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4651A529330FCB0021E780 /* WriteDiaryViewCnotroller.swift in Sources */,
 				BD465173293307000021E780 /* ViewController.swift in Sources */,
 				BD4651A329330B330021E780 /* StarCell.swift in Sources */,
 				BD46516F293307000021E780 /* AppDelegate.swift in Sources */,
