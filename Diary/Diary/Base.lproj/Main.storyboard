@@ -12,7 +12,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="8tc-ad-7L3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vsF-fc-3Oc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="mW3-20-jG4" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hsd-OC-tgU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
@@ -24,6 +23,7 @@
                         <segue destination="kAs-rV-XIL" kind="relationship" relationship="viewControllers" id="kuH-uz-TL5"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsF-fc-3Oc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1892" y="343"/>
         </scene>
@@ -48,7 +48,7 @@
         <scene sceneID="96A-7l-axj">
             <objects>
                 <navigationController id="kAs-rV-XIL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="star" selectedImage="star.fill" catalog="system" id="Eci-JK-XrC"/>
+                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="star" catalog="system" selectedImage="star.fill" id="Eci-JK-XrC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s8N-u3-Zm2">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -403,7 +403,7 @@
     <resources>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
-        <image name="star" width="128" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -11,11 +11,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    private var diaryList = [Diary]()
+    private var diaryList = [Diary]() {
+        didSet {
+            self.saveDiaryList() // 다이어리리스트에 데이터 추가되거나 변경될때마다 호출
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureCollectionView()
+        self.loadDiaryList()
+        
     }
 
     private func configureCollectionView() {
@@ -30,6 +36,35 @@ class ViewController: UIViewController {
         if let writeDiaryViewController = segue.destination as? WriteDiaryViewCnotroller {
             writeDiaryViewController.delegate = self
         }
+    }
+    
+    private func saveDiaryList() {
+        let date = self.diaryList.map {
+            [
+                "title": $0.title,
+                "contents": $0.contents,
+                "date": $0.date,
+                "isStar": $0.isStar
+            ]
+        }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(date, forKey: "diaryList")
+    }
+    
+    private func loadDiaryList() {
+        let userDefaults = UserDefaults.standard
+        guard let data = userDefaults.object(forKey: "diaryList") as? [[String: Any]] else { return }
+        self.diaryList = data.compactMap { // 다이어리타입 배열이 되게 맵핑
+            guard let title = $0["title"] as? String else { return nil }
+            guard let contents = $0["contents"] as? String else { return nil }
+            guard let date = $0["date"] as? Date else { return nil }
+            guard let isStar = $0["isStar"] as? Bool else { return nil }
+            return Diary(title: title, contents: contents, date: date, isStar: isStar)
+        }
+        // 최신순으로 정렬
+        self.diaryList = self.diaryList.sorted(by: {
+            $0.date.compare($1.date) == .orderedDescending // 날짜가 내림차순
+        })
     }
     
     private func dateToString(date: Date) -> String{
@@ -73,6 +108,9 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
 extension ViewController : WriteDairyViewDelegate {
     func didSelectRegister(diaty: Diary) {
         self.diaryList.append(diaty) // -> 등록화면에서 작성한 다이어리를 가져와서 다이어리 리스트에 추가해준다. -> collectionView에 그려줘야한다. -> configureCollectionView()
+        self.diaryList = self.diaryList.sorted(by: {
+            $0.date.compare($1.date) == .orderedDescending
+        })
         self.collectionView.reloadData()
     }
 }
