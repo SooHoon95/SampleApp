@@ -21,6 +21,7 @@
 		BD4651A329330B330021E780 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A229330B330021E780 /* StarCell.swift */; };
 		BD4651A529330FCB0021E780 /* WriteDiaryViewCnotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A429330FCB0021E780 /* WriteDiaryViewCnotroller.swift */; };
 		BD4651A7293310020021E780 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A6293310020021E780 /* DiaryDetailViewController.swift */; };
+		BD4651A929331CA20021E780 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4651A829331CA20021E780 /* Diary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BD4651A229330B330021E780 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
 		BD4651A429330FCB0021E780 /* WriteDiaryViewCnotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewCnotroller.swift; sourceTree = "<group>"; };
 		BD4651A6293310020021E780 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		BD4651A829331CA20021E780 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		BD46516D293307000021E780 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				BD4651A829331CA20021E780 /* Diary.swift */,
 				BD46516E293307000021E780 /* AppDelegate.swift */,
 				BD465170293307000021E780 /* SceneDelegate.swift */,
 				BD465172293307000021E780 /* ViewController.swift */,
@@ -278,6 +281,7 @@
 				BD4651A329330B330021E780 /* StarCell.swift in Sources */,
 				BD46516F293307000021E780 /* AppDelegate.swift in Sources */,
 				BD465171293307000021E780 /* SceneDelegate.swift in Sources */,
+				BD4651A929331CA20021E780 /* Diary.swift in Sources */,
 				BD4651A7293310020021E780 /* DiaryDetailViewController.swift in Sources */,
 				BD46519F293309BA0021E780 /* DiaryCell.swift in Sources */,
 				BD4651A1293309F60021E780 /* StarViewController.swift in Sources */,

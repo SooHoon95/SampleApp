@@ -110,6 +110,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dataLable" destination="Pf5-w7-hoY" id="Ez2-cZ-RR6"/>
+                                            <outlet property="titleLable" destination="bsF-4x-TZG" id="4YP-Yd-yCa"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -130,6 +134,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="O5p-Bd-Iv0" id="7jP-Om-25J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,7 +315,7 @@
         <scene sceneID="YBl-qr-8fR">
             <objects>
                 <viewController id="zGx-l5-8dq" customClass="WriteDiaryViewCnotroller" customModule="Diary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bHn-TB-TdA">
+                    <view key="view" contentMode="scaleToFill" id="bHn-TB-TdA" userLabel="UIView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -375,8 +382,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기작성" id="9o8-aY-nFi">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="QgQ-7l-0Xg"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="QgQ-7l-0Xg">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="zGx-l5-8dq" id="HW2-BK-oMK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="QgQ-7l-0Xg" id="xiQ-f9-fUE"/>
+                        <outlet property="contentsTextView" destination="FrO-Se-Pxw" id="sBu-ZJ-DTG"/>
+                        <outlet property="dateTextField" destination="1yj-Dc-ZQQ" id="JAy-3L-mIo"/>
+                        <outlet property="titleTextField" destination="v2E-wy-7NZ" id="o7f-Bg-DpH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="No3-qt-LBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
