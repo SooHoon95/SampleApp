@@ -7,9 +7,14 @@
 
 import UIKit
 
+enum DiaryEditorMode {
+    case new
+    case edit(IndexPath, Diary)
+}
+
 // 일기장에 리스트화면에 일기가 작성된 다이어리 객체 전달.
 protocol WriteDairyViewDelegate : AnyObject {
-    func didSelectRegister(diaty: Diary)
+    func didSelectRegister(diary: Diary)
     // 작성완료된 일기의 객체를 전달
 }
 
@@ -20,11 +25,12 @@ class WriteDiaryViewCnotroller: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var confirmButton: UIBarButtonItem!
     
-    
     private let datePicker = UIDatePicker()
     // pIcker에서 선택한 data 변수
     private var diaryDate: Date?
     weak var delegate: WriteDairyViewDelegate?
+    
+    var diaryEditorMode: DiaryEditorMode = .new
     
     
     override func viewDidLoad() {
@@ -32,8 +38,31 @@ class WriteDiaryViewCnotroller: UIViewController {
         self.configureContentsTextView()
         self.configurationDataPicker()
         self.configureInputField()
+        self.configureEditorMode()
         self.confirmButton.isEnabled = false
         
+    }
+    
+    private func configureEditorMode() {
+        switch self.diaryEditorMode {
+        case let .edit(_, diary) :
+            self.titleTextField.text = diary.title
+            self.contentsTextView.text = diary.contents
+            self.dateTextField.text = self.dateToString(date: diary.date)
+            self.diaryDate = diary.date
+            self.confirmButton.title = "수정"
+            
+        default:
+            break
+        }
+        
+    }
+    
+    private func dateToString(date: Date) -> String{
+        let formmater = DateFormatter()
+        formmater.dateFormat = "yy년 MM월 dd일(EEEEEE)"
+        formmater.locale = Locale(identifier: "ko_KR")
+        return formmater.string(from: date)
     }
     
     private func configurationDataPicker() {
@@ -64,8 +93,20 @@ class WriteDiaryViewCnotroller: UIViewController {
         guard let contents = self.contentsTextView.text else { return }
         guard let date = self.diaryDate else { return }
         let diary = Diary(title: title, contents: contents, date: date, isStar: false)
-         
-        self.delegate?.didSelectRegister(diaty: diary)
+        
+        switch self.diaryEditorMode {
+        case .new :
+            self.delegate?.didSelectRegister(diary: diary)
+            
+        case let .edit(indexPath, _):
+            NotificationCenter.default.post(
+                name: NSNotification.Name("editDiary"),
+                object: diary, // 노티피케이션샌터를 통해 전달할 객체
+                userInfo: [
+                    "indexPath.row" : indexPath.row
+                ]
+            )
+        }
         self.navigationController?.popViewController(animated: true)
     }
     

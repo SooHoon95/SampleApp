@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.configureCollectionView()
         self.loadDiaryList()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(editDiaryNotification(_: )),
+            name: NSNotification.Name("editDiary"),
+            object: nil
+        )
         
     }
 
@@ -30,6 +36,16 @@ class ViewController: UIViewController {
         self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    @objc func editDiaryNotification(_ notification: Notification) {
+        guard let diary = notification.object as? Diary else { return }
+        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+        self.diaryList[row] = diary
+        self.diaryList = self.diaryList.sorted(by:  {
+            $0.date.compare($1.date) == .orderedDescending
+        })
+        self.collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,8 +122,8 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
 }
 
 extension ViewController : WriteDairyViewDelegate {
-    func didSelectRegister(diaty: Diary) {
-        self.diaryList.append(diaty) // -> 등록화면에서 작성한 다이어리를 가져와서 다이어리 리스트에 추가해준다. -> collectionView에 그려줘야한다. -> configureCollectionView()
+    func didSelectRegister(diary: Diary) {
+        self.diaryList.append(diary) // -> 등록화면에서 작성한 다이어리를 가져와서 다이어리 리스트에 추가해준다. -> collectionView에 그려줘야한다. -> configureCollectionView()
         self.diaryList = self.diaryList.sorted(by: {
             $0.date.compare($1.date) == .orderedDescending
         })
