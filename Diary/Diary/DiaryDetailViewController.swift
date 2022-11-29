@@ -8,9 +8,6 @@
 import UIKit
 
 // 삭제 delegate
-protocol DiaryDetailViewDelegate: AnyObject {
-    func didSelecteDelete(indexPath: IndexPath)
-}
 
 class DiaryDetailViewController: UIViewController {
 
@@ -19,7 +16,6 @@ class DiaryDetailViewController: UIViewController {
     @IBOutlet weak var dateLable: UILabel!
     var starButton: UIBarButtonItem?
 
-    weak var delegate: DiaryDetailViewDelegate?
     // MARK: - 일기장 리스트에서 전달받을 프로퍼티 선언
     var diary: Diary?
     var indexPath : IndexPath?
@@ -28,6 +24,12 @@ class DiaryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(starDiaryNotification(_:)),
+            name: NSNotification.Name("starDiary"),
+            object: nil)
     }
     
     private func configureView() {
@@ -68,19 +70,53 @@ class DiaryDetailViewController: UIViewController {
     @objc func editDiaryNotification(_ notification: Notification) {
         // 수정된 객체 받아서 뷰에 업데이트
         guard let diary = notification.object as? Diary else { return }
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
+        
         self.diary = diary
         self.configureView()
     }
+
+    @objc func starDiaryNotification(_ notification: Notification) {
+        guard let starDiary = notification.object as? [String: Any] else  { return }
+        guard let isStar = starDiary["isStar"] as? Bool else { return }
+        guard let uuidString = starDiary["uuidString"] as? String else { return }
+        guard let diary = self.diary else { return }
+        if diary.uuidString == uuidString {
+            self.diary?.isStar = isStar
+            self.configureView()
+        }
+        
+    }
+    
     
     @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
-        self.delegate?.didSelecteDelete(indexPath: indexPath)
+        guard let uuidString = self.diary?.uuidString else { return }
+        NotificationCenter.default.post(
+            name: Notification.Name("deleteDiary"),
+            object: uuidString,
+            userInfo: nil
+        )
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func tapStarButton() {
+        guard let isStar = self.diary?.isStar else { return }
+//        guard let uuidString = self.diary?.uuidString else { return }
+        if isStar {
+            self.starButton?.image = UIImage(systemName: "star")
+        } else {
+            self.starButton?.image = UIImage(systemName: "star.fill")
+        }
+        self.diary?.isStar = !isStar
         
+        NotificationCenter.default.post(
+            name: NSNotification.Name("starDiary"),
+            object: [
+                "diary": self.diary,
+                "isStar" : self.diary?.isStar ?? false,
+                "uuidString" : diary?.uuidString
+                ],
+            userInfo: nil
+        )
     }
     
     deinit {
