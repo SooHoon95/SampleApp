@@ -25,6 +25,9 @@
                                 <rect key="frame" x="136.66666666666666" y="135" width="116.66666666666666" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="날씨 가져오기"/>
+                                <connections>
+                                    <action selector="tapFetchWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6wX-g4-mqd"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pWg-1b-vwi">
                                 <rect key="frame" x="24" y="219.33333333333331" width="342" height="143.33333333333331"/>
@@ -90,6 +93,14 @@
                             <constraint firstItem="hNH-cL-5r0" firstAttribute="centerX" secondItem="frx-u6-9Xa" secondAttribute="centerX" id="mJz-Zn-AJf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="JLL-nr-v7e" id="qpE-VE-Bb7"/>
+                        <outlet property="cityNameTextField" destination="frx-u6-9Xa" id="08o-jh-eny"/>
+                        <outlet property="maxTempLabel" destination="kgh-dd-Tru" id="2bF-5p-K5P"/>
+                        <outlet property="minTempLabel" destination="JB2-MX-Va6" id="zSo-xq-dx5"/>
+                        <outlet property="tempLabel" destination="hy0-66-Lf3" id="xdp-2Y-6d5"/>
+                        <outlet property="weatherDiscription" destination="khQ-fI-PRc" id="mYt-FL-7OG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
