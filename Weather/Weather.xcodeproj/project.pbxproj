@@ -17,6 +17,7 @@
 		F279614D294C4BBF0033584F /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279614C294C4BBF0033584F /* WeatherUITests.swift */; };
 		F279614F294C4BBF0033584F /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279614E294C4BBF0033584F /* WeatherUITestsLaunchTests.swift */; };
 		F279615C294C4F220033584F /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279615B294C4F220033584F /* WeatherInformation.swift */; };
+		F279615E29514A460033584F /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279615D29514A460033584F /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F279614C294C4BBF0033584F /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		F279614E294C4BBF0033584F /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F279615B294C4F220033584F /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		F279615D29514A460033584F /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F2796136294C4BBF0033584F /* LaunchScreen.storyboard */,
 				F2796139294C4BBF0033584F /* Info.plist */,
 				F279615B294C4F220033584F /* WeatherInformation.swift */,
+				F279615D29514A460033584F /* ErrorMessage.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				F2796130294C4BBE0033584F /* ViewController.swift in Sources */,
 				F279615C294C4F220033584F /* WeatherInformation.swift in Sources */,
+				F279615E29514A460033584F /* ErrorMessage.swift in Sources */,
 				F279612C294C4BBE0033584F /* AppDelegate.swift in Sources */,
 				F279612E294C4BBE0033584F /* SceneDelegate.swift in Sources */,
 			);
