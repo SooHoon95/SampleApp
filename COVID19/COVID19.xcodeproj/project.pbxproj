@@ -11,6 +11,7 @@
 		56F218EEA77AE9756A8FC825 /* Pods_COVID19_COVID19UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202E837C9D7090C9C31B6486 /* Pods_COVID19_COVID19UITests.framework */; };
 		B0DF2F6883FB390D894116D1 /* Pods_COVID19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3ED1F6F5A53A4BBB512492A /* Pods_COVID19.framework */; };
 		F20DD03E29517E9900EFAB01 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DD03D29517E9900EFAB01 /* CovidDetailViewController.swift */; };
+		F20DD0402951813800EFAB01 /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DD03F2951813800EFAB01 /* CityCovidOverview.swift */; };
 		F279616C295157A20033584F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279616B295157A20033584F /* AppDelegate.swift */; };
 		F279616E295157A20033584F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279616D295157A20033584F /* SceneDelegate.swift */; };
 		F2796170295157A20033584F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279616F295157A20033584F /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		B98CE98C163E1CD0FA7A6CA9 /* Pods-COVID19-COVID19UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19-COVID19UITests.release.xcconfig"; path = "Target Support Files/Pods-COVID19-COVID19UITests/Pods-COVID19-COVID19UITests.release.xcconfig"; sourceTree = "<group>"; };
 		E3A7A5270F2F91A63AEAC0D7 /* Pods-COVID19-COVID19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19-COVID19UITests.debug.xcconfig"; path = "Target Support Files/Pods-COVID19-COVID19UITests/Pods-COVID19-COVID19UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F20DD03D29517E9900EFAB01 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
+		F20DD03F2951813800EFAB01 /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
 		F2796168295157A20033584F /* COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279616B295157A20033584F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F279616D295157A20033584F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 		F279615F295157A20033584F = {
 			isa = PBXGroup;
 			children = (
-				F20DD03D29517E9900EFAB01 /* CovidDetailViewController.swift */,
 				F279616A295157A20033584F /* COVID19 */,
 				F2796181295157A40033584F /* COVID19Tests */,
 				F279618B295157A40033584F /* COVID19UITests */,
@@ -142,6 +143,7 @@
 		F279616A295157A20033584F /* COVID19 */ = {
 			isa = PBXGroup;
 			children = (
+				F20DD03D29517E9900EFAB01 /* CovidDetailViewController.swift */,
 				F279616B295157A20033584F /* AppDelegate.swift */,
 				F279616D295157A20033584F /* SceneDelegate.swift */,
 				F279616F295157A20033584F /* ViewController.swift */,
@@ -149,6 +151,7 @@
 				F2796174295157A30033584F /* Assets.xcassets */,
 				F2796176295157A30033584F /* LaunchScreen.storyboard */,
 				F2796179295157A30033584F /* Info.plist */,
+				F20DD03F2951813800EFAB01 /* CityCovidOverview.swift */,
 			);
 			path = COVID19;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				F2796170295157A20033584F /* ViewController.swift in Sources */,
 				F20DD03E29517E9900EFAB01 /* CovidDetailViewController.swift in Sources */,
 				F279616C295157A20033584F /* AppDelegate.swift in Sources */,
+				F20DD0402951813800EFAB01 /* CityCovidOverview.swift in Sources */,
 				F279616E295157A20033584F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,7 +607,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.COVID19;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.COVID19sh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -632,7 +636,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.COVID19;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.COVID19sh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
