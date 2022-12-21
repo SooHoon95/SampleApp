@@ -119,7 +119,6 @@
 				EC576D6366DD90B6D3A5D958 /* Pods-SpotifyLoginSampleAppTests.debug.xcconfig */,
 				03470569DCCDA13BE9E8E321 /* Pods-SpotifyLoginSampleAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
