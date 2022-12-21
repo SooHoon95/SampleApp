@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SpotifyLoginSampleApp_SpotifyLoginSampleAppUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SpotifyLoginSampleApp_SpotifyLoginSampleAppUITests
+@end
