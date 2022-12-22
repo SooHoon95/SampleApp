@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         // Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+
         
     }
     
@@ -41,8 +42,9 @@ class LoginViewController: UIViewController {
                 return
             }
             guard let authentication = signInResult?.user else { return }
+            print("token: \(authentication.idToken!.tokenString)")
             
-            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken as? String ?? "", accessToken: authentication.accessToken as? String ?? "")
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken!.tokenString, accessToken: authentication.accessToken.tokenString)
             
             Auth.auth().signIn(with: credential) { _, _ in
                 self.showMainViewController()
@@ -57,6 +59,7 @@ class LoginViewController: UIViewController {
         mainViewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(mainViewController, animated: true)
     }
+    
     @IBAction func appleLoginButtonTap(_ sender: UIButton) {
     }
     
