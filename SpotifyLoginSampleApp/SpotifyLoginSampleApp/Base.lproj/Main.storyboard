@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUQ-tD-rrs">
-                                <rect key="frame" x="163.66666666666666" y="463.66666666666669" width="63" height="34"/>
+                                <rect key="frame" x="163.66666666666666" y="518.66666666666663" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" systemColor="systemGray6Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -250,13 +250,20 @@
                                     <action selector="logoutButtonTapped:" destination="LY5-VV-NE9" eventType="touchUpInside" id="t4s-Hw-fsQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPx-RM-qkL">
+                                <rect key="frame" x="157.66666666666666" y="463.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FK2-fj-Zhg"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fUJ-Fl-4SM" firstAttribute="centerY" secondItem="FK2-fj-Zhg" secondAttribute="centerY" id="0cA-3j-8OS"/>
+                            <constraint firstItem="UPx-RM-qkL" firstAttribute="top" secondItem="fUJ-Fl-4SM" secondAttribute="bottom" constant="20" id="EjV-wM-CGn"/>
+                            <constraint firstItem="UPx-RM-qkL" firstAttribute="centerX" secondItem="FK2-fj-Zhg" secondAttribute="centerX" id="FBe-h4-mmi"/>
                             <constraint firstItem="nUQ-tD-rrs" firstAttribute="centerX" secondItem="FK2-fj-Zhg" secondAttribute="centerX" id="Psg-ee-NFe"/>
-                            <constraint firstItem="nUQ-tD-rrs" firstAttribute="top" secondItem="fUJ-Fl-4SM" secondAttribute="bottom" constant="20" id="fKC-dJ-Vog"/>
+                            <constraint firstItem="nUQ-tD-rrs" firstAttribute="top" secondItem="UPx-RM-qkL" secondAttribute="bottom" constant="20" id="ZJw-me-2Rv"/>
                             <constraint firstItem="fUJ-Fl-4SM" firstAttribute="centerX" secondItem="FK2-fj-Zhg" secondAttribute="centerX" id="iTK-sR-xFG"/>
                         </constraints>
                     </view>
