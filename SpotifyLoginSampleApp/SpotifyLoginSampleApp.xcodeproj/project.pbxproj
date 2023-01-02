@@ -67,6 +67,7 @@
 		F20DD06E2951B7D400EFAB01 /* SpotifyLoginSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginSampleAppUITests.swift; sourceTree = "<group>"; };
 		F20DD0702951B7D400EFAB01 /* SpotifyLoginSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F20DD07D2951B7FB00EFAB01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F22E7F162962A2BB00C62F16 /* SpotifyLoginSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpotifyLoginSampleApp.entitlements; sourceTree = "<group>"; };
 		F25BF96A2951CDC700F03C4A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F2BC007B2952D71D00A2626C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +148,7 @@
 		F20DD04C2951B7D300EFAB01 /* SpotifyLoginSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				F22E7F162962A2BB00C62F16 /* SpotifyLoginSampleApp.entitlements */,
 				F25BF96A2951CDC700F03C4A /* MainViewController.swift */,
 				F20C54282951C890003EE150 /* EnterEmailViewController.swift */,
 				F20DD04D2951B7D300EFAB01 /* AppDelegate.swift */,
@@ -600,9 +602,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpotifyLoginSampleApp/SpotifyLoginSampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				DEVELOPMENT_TEAM = GUZCT2X325;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpotifyLoginSampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -629,9 +632,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SpotifyLoginSampleApp/SpotifyLoginSampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				DEVELOPMENT_TEAM = GUZCT2X325;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpotifyLoginSampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
