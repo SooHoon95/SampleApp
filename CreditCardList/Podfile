@@ -8,6 +8,7 @@ target 'CreditCardList' do
   # Pods for CreditCardList
   pod 'Kingfisher'
   pod 'lottie-ios'
+  pod 'Firebase/Database'
 
   target 'CreditCardListTests' do
     inherit! :search_paths
