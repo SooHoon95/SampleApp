@@ -25,6 +25,7 @@
 		F2B2E43A2963E85700CE618F /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B2E4392963E85700CE618F /* CardDetailViewController.swift */; };
 		F2F497D92963FD53000320CE /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F497D82963FD53000320CE /* money.json */; };
 		F2F497DB296404D9000320CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2F497DA296404D9000320CE /* GoogleService-Info.plist */; };
+		F2F497DD29643AFF000320CE /* CreditCardDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F497DC29643AFF000320CE /* CreditCardDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F2B2E4392963E85700CE618F /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		F2F497D82963FD53000320CE /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
 		F2F497DA296404D9000320CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2F497DC29643AFF000320CE /* CreditCardDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				F22E7F312962D74300C62F16 /* Info.plist */,
 				F22E7F532962D76200C62F16 /* CardListViewController.swift */,
 				F2B2E4392963E85700CE618F /* CardDetailViewController.swift */,
+				F2F497DC29643AFF000320CE /* CreditCardDummy.swift */,
 				F2F497DA296404D9000320CE /* GoogleService-Info.plist */,
 			);
 			path = CreditCardList;
@@ -431,6 +434,7 @@
 				F2B2E43A2963E85700CE618F /* CardDetailViewController.swift in Sources */,
 				F22E7F562962D86700C62F16 /* CreditCard.swift in Sources */,
 				F22E7F592962D97600C62F16 /* CardListCell.swift in Sources */,
+				F2F497DD29643AFF000320CE /* CreditCardDummy.swift in Sources */,
 				F22E7F242962D74100C62F16 /* AppDelegate.swift in Sources */,
 				F22E7F262962D74100C62F16 /* SceneDelegate.swift in Sources */,
 			);
