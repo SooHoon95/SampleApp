@@ -7,9 +7,10 @@
 
 import UIKit
 import Kingfisher // 이미지 url 만 가지고 이미지를 불러오기
+import FirebaseDatabase
 
 class CardListViewController: UITableViewController {
-    
+    var ref: DatabaseReference!     // Firebase Database
     var creditCardList: [CreditCard] = [] // 처음에는 아무것도 전달 받지 못하니까 빈배열
     
     override func viewDidLoad() {
@@ -18,6 +19,30 @@ class CardListViewController: UITableViewController {
         //UITableView Cell Register
         let nibName = UINib(nibName: "CardListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "CardListCell")
+        
+        ref = Database.database().reference() // 파베 데이터 베이스에 넣어둔 데이터들을 가져올 수 있다.
+        
+        ref.observe(.value) { snapshot in                                               // ref를 옵저브하면서 value 값을 바라본다.
+            guard let value = snapshot.value as? [String: [String: Any]] else { return }
+            
+            // json 디코딩 : 트라이문으로 가져온다.
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: value) // 스냅샷을 가져온 value 가 오브젝트가 된다
+                let cardData = try JSONDecoder().decode([String: CreditCard].self, from: jsonData)
+                let cardList = Array(cardData.values)                            // 딕셔너리 값일거니까 벨류만 가지고 온다
+                self.creditCardList = cardList.sorted { $0.rank < $1.rank }      // 순위 정렬
+                
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            } catch let error {
+                print("Error JSON parsing \(error.localizedDescription)")
+            }
+            
+            
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +53,7 @@ class CardListViewController: UITableViewController {
         // 데이터 전달
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CardListCell", for: indexPath) as? CardListCell else { return UITableViewCell() }
         cell.rankLabel.text = "\(creditCardList[indexPath.row].rank)위"
-        cell.promotionLabel.text = "\(creditCardList[indexPath.row].promotionDetail)만원 증정"
+        cell.promotionLabel.text = "\(creditCardList[indexPath.row].promotionDetail.amount)만원 증정"
         cell.cardNameLabel.text = "\(creditCardList[indexPath.row].name)"
         
         let imageURL = URL(string: creditCardList[indexPath.row].cardImageURL)
@@ -38,7 +63,7 @@ class CardListViewController: UITableViewController {
     }
     
     // cell 높이 지정
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     

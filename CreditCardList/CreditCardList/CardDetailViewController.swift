@@ -14,6 +14,8 @@ class CardDetailViewController : UIViewController {
     @IBOutlet weak var lottieView: LottieAnimationView! // money.json 에 있는 파일을 lottie가 해석해서 움짤을 생성한다.
     
     @IBOutlet weak var titleLable: UILabel!
+    
+    
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var benefitConditionLabel: UILabel!
@@ -23,6 +25,7 @@ class CardDetailViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // GIF 박기
         let animationView = LottieAnimationView(name: "money")
         lottieView.contentMode = .scaleAspectFit
         lottieView.addSubview(animationView)
