@@ -73,5 +73,42 @@ class CardListViewController: UITableViewController {
         guard let detailViewController = storyboard.instantiateViewController(identifier: "CardDetailViewController") as? CardDetailViewController else { return }
         detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
         self.show(detailViewController, sender: nil)
+
+        // 수정 Option 1
+        let cardID = creditCardList[indexPath.row].id
+//        ref.child("Item\(cardID)/isSelected").setValue(true)
+        
+        // 수정 Option 2 쿼리에서 특정값으로 검색
+        ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [ weak self ] snapshot in
+            guard let self = self ,
+                  let value = snapshot.value as? [String: [String: Any]],
+                  let key = value.keys.first else { return }
+            
+            self.ref.child("\(key)/isSelected").setValue(true)
+        }
+    }
+    
+    // 특정 데이터삭제
+    // 특정 신용카드 리스트에서 삭제하면 실제 데이터베ㅣ스에서 지우기
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            // 삭제 Option 1
+            let cardID = creditCardList[indexPath.row].id
+            ref.child("Item\(cardID)").removeValue() // 해당경로에 있는 모든 데이터 삭제
+            
+            // Option 2  경로를 모를때 -> 검색 후 삭제
+            ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [ weak self ] snapshot in
+                guard let self = self,
+                        let value = snapshot.value as? [String: [String: Any]],
+                        let key = value.keys.first else { return }
+                
+                self.ref.child(key).removeValue()
+            }
+        }
     }
 }
