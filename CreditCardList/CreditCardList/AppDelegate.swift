@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let db = Firestore.firestore()
         
-        db.collection("creditCardList").getDocuments { snapshot, _ in
+        db.collection("creditCardList").getDocuments(completion: { snapshot, _ in
             guard snapshot?.isEmpty == true else { return }
             let batch = db.batch()
             
@@ -38,7 +38,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let card8Ref = db.collection("creditCardList").document("card8")
             let card9Ref = db.collection("creditCardList").document("card9")
             let card10Ref = db.collection("creditCardList").document("card10")
-        }
+            
+            do {
+                try batch.setData(from: CreditCardDummy.card0, forDocument: card0Ref)
+                try batch.setData(from: CreditCardDummy.card1, forDocument: card1Ref)
+                try batch.setData(from: CreditCardDummy.card2, forDocument: card2Ref)
+                try batch.setData(from: CreditCardDummy.card3, forDocument: card3Ref)
+                try batch.setData(from: CreditCardDummy.card4, forDocument: card4Ref)
+                try batch.setData(from: CreditCardDummy.card5, forDocument: card5Ref)
+                try batch.setData(from: CreditCardDummy.card6, forDocument: card6Ref)
+                try batch.setData(from: CreditCardDummy.card7, forDocument: card7Ref)
+                try batch.setData(from: CreditCardDummy.card8, forDocument: card8Ref)
+                try batch.setData(from: CreditCardDummy.card9, forDocument: card9Ref)
+
+            } catch let error {
+                print("Errpr writing card to Firestore\(error.localizedDescription)")
+            }
+            // 마지막에 commit 해줘야 추가가된다.
+            batch.commit()
+        })
+       
     
         return true
     }
