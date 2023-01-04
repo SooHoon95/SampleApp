@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42896734EF9EC3AD4E4A6711 /* Pods_CreditCardList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA707B6762407FB8C50409F /* Pods_CreditCardList.framework */; };
+		BB92DBA6B0B60C30C60F5BB0 /* Pods_CreditCardList_CreditCardListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03853299C0B6AF379521BF4E /* Pods_CreditCardList_CreditCardListUITests.framework */; };
+		E17BE86C574B0CCD7D1A9AF2 /* Pods_CreditCardListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0842508EDB3ABBF0F4D98038 /* Pods_CreditCardListTests.framework */; };
+		F22E7F242962D74100C62F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F232962D74100C62F16 /* AppDelegate.swift */; };
+		F22E7F262962D74100C62F16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F252962D74100C62F16 /* SceneDelegate.swift */; };
+		F22E7F2B2962D74100C62F16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22E7F292962D74100C62F16 /* Main.storyboard */; };
+		F22E7F2D2962D74300C62F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22E7F2C2962D74300C62F16 /* Assets.xcassets */; };
+		F22E7F302962D74300C62F16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22E7F2E2962D74300C62F16 /* LaunchScreen.storyboard */; };
+		F22E7F3B2962D74300C62F16 /* CreditCardListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F3A2962D74300C62F16 /* CreditCardListTests.swift */; };
+		F22E7F452962D74300C62F16 /* CreditCardListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F442962D74300C62F16 /* CreditCardListUITests.swift */; };
+		F22E7F472962D74300C62F16 /* CreditCardListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F462962D74300C62F16 /* CreditCardListUITestsLaunchTests.swift */; };
+		F22E7F542962D76200C62F16 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F532962D76200C62F16 /* CardListViewController.swift */; };
+		F22E7F562962D86700C62F16 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F552962D86700C62F16 /* CreditCard.swift */; };
+		F22E7F592962D97600C62F16 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E7F572962D97600C62F16 /* CardListCell.swift */; };
+		F22E7F5A2962D97600C62F16 /* CardListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22E7F582962D97600C62F16 /* CardListCell.xib */; };
+		F2B2E43A2963E85700CE618F /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B2E4392963E85700CE618F /* CardDetailViewController.swift */; };
+		F2F497D92963FD53000320CE /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = F2F497D82963FD53000320CE /* money.json */; };
+		F2F497DB296404D9000320CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2F497DA296404D9000320CE /* GoogleService-Info.plist */; };
+		F2F497DD29643AFF000320CE /* CreditCardDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F497DC29643AFF000320CE /* CreditCardDummy.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F22E7F372962D74300C62F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22E7F182962D74100C62F16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22E7F1F2962D74100C62F16;
+			remoteInfo = CreditCardList;
+		};
+		F22E7F412962D74300C62F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22E7F182962D74100C62F16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22E7F1F2962D74100C62F16;
+			remoteInfo = CreditCardList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03853299C0B6AF379521BF4E /* Pods_CreditCardList_CreditCardListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCardList_CreditCardListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0842508EDB3ABBF0F4D98038 /* Pods_CreditCardListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCardListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F90DEBB95C2BAA5C708D1AD /* Pods-CreditCardList-CreditCardListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardList-CreditCardListUITests.release.xcconfig"; path = "Target Support Files/Pods-CreditCardList-CreditCardListUITests/Pods-CreditCardList-CreditCardListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		961EC1B1E97F0F90DF229B57 /* Pods-CreditCardList-CreditCardListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardList-CreditCardListUITests.debug.xcconfig"; path = "Target Support Files/Pods-CreditCardList-CreditCardListUITests/Pods-CreditCardList-CreditCardListUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EA707B6762407FB8C50409F /* Pods_CreditCardList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCardList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD5C8A38CBD78C9F1657B7D /* Pods-CreditCardListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardListTests.release.xcconfig"; path = "Target Support Files/Pods-CreditCardListTests/Pods-CreditCardListTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE0DB88343D21F3C73C917CD /* Pods-CreditCardList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardList.release.xcconfig"; path = "Target Support Files/Pods-CreditCardList/Pods-CreditCardList.release.xcconfig"; sourceTree = "<group>"; };
+		E3B021A7D8780DE5E93A1565 /* Pods-CreditCardList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardList.debug.xcconfig"; path = "Target Support Files/Pods-CreditCardList/Pods-CreditCardList.debug.xcconfig"; sourceTree = "<group>"; };
+		F1A3761EA58271726744A917 /* Pods-CreditCardListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCardListTests.debug.xcconfig"; path = "Target Support Files/Pods-CreditCardListTests/Pods-CreditCardListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F22E7F202962D74100C62F16 /* CreditCardList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22E7F232962D74100C62F16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F22E7F252962D74100C62F16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F22E7F2A2962D74100C62F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F22E7F2C2962D74300C62F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F22E7F2F2962D74300C62F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F22E7F312962D74300C62F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22E7F362962D74300C62F16 /* CreditCardListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22E7F3A2962D74300C62F16 /* CreditCardListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListTests.swift; sourceTree = "<group>"; };
+		F22E7F402962D74300C62F16 /* CreditCardListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22E7F442962D74300C62F16 /* CreditCardListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListUITests.swift; sourceTree = "<group>"; };
+		F22E7F462962D74300C62F16 /* CreditCardListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F22E7F532962D76200C62F16 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		F22E7F552962D86700C62F16 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		F22E7F572962D97600C62F16 /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
+		F22E7F582962D97600C62F16 /* CardListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListCell.xib; sourceTree = "<group>"; };
+		F2B2E4392963E85700CE618F /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		F2F497D82963FD53000320CE /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
+		F2F497DA296404D9000320CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2F497DC29643AFF000320CE /* CreditCardDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardDummy.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F22E7F1D2962D74100C62F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42896734EF9EC3AD4E4A6711 /* Pods_CreditCardList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F332962D74300C62F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17BE86C574B0CCD7D1A9AF2 /* Pods_CreditCardListTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F3D2962D74300C62F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB92DBA6B0B60C30C60F5BB0 /* Pods_CreditCardList_CreditCardListUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48DD6674576CE3BD0FC1BFD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3B021A7D8780DE5E93A1565 /* Pods-CreditCardList.debug.xcconfig */,
+				BE0DB88343D21F3C73C917CD /* Pods-CreditCardList.release.xcconfig */,
+				961EC1B1E97F0F90DF229B57 /* Pods-CreditCardList-CreditCardListUITests.debug.xcconfig */,
+				0F90DEBB95C2BAA5C708D1AD /* Pods-CreditCardList-CreditCardListUITests.release.xcconfig */,
+				F1A3761EA58271726744A917 /* Pods-CreditCardListTests.debug.xcconfig */,
+				AFD5C8A38CBD78C9F1657B7D /* Pods-CreditCardListTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E5E349818C9C688C50E9316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EA707B6762407FB8C50409F /* Pods_CreditCardList.framework */,
+				03853299C0B6AF379521BF4E /* Pods_CreditCardList_CreditCardListUITests.framework */,
+				0842508EDB3ABBF0F4D98038 /* Pods_CreditCardListTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F22E7F172962D74100C62F16 = {
+			isa = PBXGroup;
+			children = (
+				F22E7F222962D74100C62F16 /* CreditCardList */,
+				F22E7F392962D74300C62F16 /* CreditCardListTests */,
+				F22E7F432962D74300C62F16 /* CreditCardListUITests */,
+				F22E7F212962D74100C62F16 /* Products */,
+				48DD6674576CE3BD0FC1BFD6 /* Pods */,
+				4E5E349818C9C688C50E9316 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F22E7F212962D74100C62F16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F22E7F202962D74100C62F16 /* CreditCardList.app */,
+				F22E7F362962D74300C62F16 /* CreditCardListTests.xctest */,
+				F22E7F402962D74300C62F16 /* CreditCardListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F22E7F222962D74100C62F16 /* CreditCardList */ = {
+			isa = PBXGroup;
+			children = (
+				F2F497D82963FD53000320CE /* money.json */,
+				F22E7F232962D74100C62F16 /* AppDelegate.swift */,
+				F22E7F252962D74100C62F16 /* SceneDelegate.swift */,
+				F22E7F292962D74100C62F16 /* Main.storyboard */,
+				F22E7F552962D86700C62F16 /* CreditCard.swift */,
+				F22E7F572962D97600C62F16 /* CardListCell.swift */,
+				F22E7F582962D97600C62F16 /* CardListCell.xib */,
+				F22E7F2C2962D74300C62F16 /* Assets.xcassets */,
+				F22E7F2E2962D74300C62F16 /* LaunchScreen.storyboard */,
+				F22E7F312962D74300C62F16 /* Info.plist */,
+				F22E7F532962D76200C62F16 /* CardListViewController.swift */,
+				F2B2E4392963E85700CE618F /* CardDetailViewController.swift */,
+				F2F497DC29643AFF000320CE /* CreditCardDummy.swift */,
+				F2F497DA296404D9000320CE /* GoogleService-Info.plist */,
+			);
+			path = CreditCardList;
+			sourceTree = "<group>";
+		};
+		F22E7F392962D74300C62F16 /* CreditCardListTests */ = {
+			isa = PBXGroup;
+			children = (
+				F22E7F3A2962D74300C62F16 /* CreditCardListTests.swift */,
+			);
+			path = CreditCardListTests;
+			sourceTree = "<group>";
+		};
+		F22E7F432962D74300C62F16 /* CreditCardListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F22E7F442962D74300C62F16 /* CreditCardListUITests.swift */,
+				F22E7F462962D74300C62F16 /* CreditCardListUITestsLaunchTests.swift */,
+			);
+			path = CreditCardListUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F22E7F1F2962D74100C62F16 /* CreditCardList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22E7F4A2962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardList" */;
+			buildPhases = (
+				E3191A54C3E560E221534453 /* [CP] Check Pods Manifest.lock */,
+				F22E7F1C2962D74100C62F16 /* Sources */,
+				F22E7F1D2962D74100C62F16 /* Frameworks */,
+				F22E7F1E2962D74100C62F16 /* Resources */,
+				0BB313AAD13D6EA7F580AD06 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CreditCardList;
+			productName = CreditCardList;
+			productReference = F22E7F202962D74100C62F16 /* CreditCardList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F22E7F352962D74300C62F16 /* CreditCardListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22E7F4D2962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardListTests" */;
+			buildPhases = (
+				1406BB3A3B009E7E93036095 /* [CP] Check Pods Manifest.lock */,
+				F22E7F322962D74300C62F16 /* Sources */,
+				F22E7F332962D74300C62F16 /* Frameworks */,
+				F22E7F342962D74300C62F16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22E7F382962D74300C62F16 /* PBXTargetDependency */,
+			);
+			name = CreditCardListTests;
+			productName = CreditCardListTests;
+			productReference = F22E7F362962D74300C62F16 /* CreditCardListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F22E7F3F2962D74300C62F16 /* CreditCardListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22E7F502962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardListUITests" */;
+			buildPhases = (
+				40B7E445EBD685110745B8BD /* [CP] Check Pods Manifest.lock */,
+				F22E7F3C2962D74300C62F16 /* Sources */,
+				F22E7F3D2962D74300C62F16 /* Frameworks */,
+				F22E7F3E2962D74300C62F16 /* Resources */,
+				389E89D00602876772EF83B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22E7F422962D74300C62F16 /* PBXTargetDependency */,
+			);
+			name = CreditCardListUITests;
+			productName = CreditCardListUITests;
+			productReference = F22E7F402962D74300C62F16 /* CreditCardListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F22E7F182962D74100C62F16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F22E7F1F2962D74100C62F16 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					F22E7F352962D74300C62F16 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = F22E7F1F2962D74100C62F16;
+					};
+					F22E7F3F2962D74300C62F16 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = F22E7F1F2962D74100C62F16;
+					};
+				};
+			};
+			buildConfigurationList = F22E7F1B2962D74100C62F16 /* Build configuration list for PBXProject "CreditCardList" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F22E7F172962D74100C62F16;
+			productRefGroup = F22E7F212962D74100C62F16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F22E7F1F2962D74100C62F16 /* CreditCardList */,
+				F22E7F352962D74300C62F16 /* CreditCardListTests */,
+				F22E7F3F2962D74300C62F16 /* CreditCardListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F22E7F1E2962D74100C62F16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22E7F302962D74300C62F16 /* LaunchScreen.storyboard in Resources */,
+				F22E7F2D2962D74300C62F16 /* Assets.xcassets in Resources */,
+				F2F497D92963FD53000320CE /* money.json in Resources */,
+				F22E7F2B2962D74100C62F16 /* Main.storyboard in Resources */,
+				F22E7F5A2962D97600C62F16 /* CardListCell.xib in Resources */,
+				F2F497DB296404D9000320CE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F342962D74300C62F16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F3E2962D74300C62F16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BB313AAD13D6EA7F580AD06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CreditCardList/Pods-CreditCardList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CreditCardList/Pods-CreditCardList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CreditCardList/Pods-CreditCardList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1406BB3A3B009E7E93036095 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CreditCardListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		389E89D00602876772EF83B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CreditCardList-CreditCardListUITests/Pods-CreditCardList-CreditCardListUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CreditCardList-CreditCardListUITests/Pods-CreditCardList-CreditCardListUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CreditCardList-CreditCardListUITests/Pods-CreditCardList-CreditCardListUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40B7E445EBD685110745B8BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CreditCardList-CreditCardListUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3191A54C3E560E221534453 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CreditCardList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F22E7F1C2962D74100C62F16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22E7F542962D76200C62F16 /* CardListViewController.swift in Sources */,
+				F2B2E43A2963E85700CE618F /* CardDetailViewController.swift in Sources */,
+				F22E7F562962D86700C62F16 /* CreditCard.swift in Sources */,
+				F22E7F592962D97600C62F16 /* CardListCell.swift in Sources */,
+				F2F497DD29643AFF000320CE /* CreditCardDummy.swift in Sources */,
+				F22E7F242962D74100C62F16 /* AppDelegate.swift in Sources */,
+				F22E7F262962D74100C62F16 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F322962D74300C62F16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22E7F3B2962D74300C62F16 /* CreditCardListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22E7F3C2962D74300C62F16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22E7F452962D74300C62F16 /* CreditCardListUITests.swift in Sources */,
+				F22E7F472962D74300C62F16 /* CreditCardListUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F22E7F382962D74300C62F16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22E7F1F2962D74100C62F16 /* CreditCardList */;
+			targetProxy = F22E7F372962D74300C62F16 /* PBXContainerItemProxy */;
+		};
+		F22E7F422962D74300C62F16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22E7F1F2962D74100C62F16 /* CreditCardList */;
+			targetProxy = F22E7F412962D74300C62F16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F22E7F292962D74100C62F16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22E7F2A2962D74100C62F16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F22E7F2E2962D74300C62F16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22E7F2F2962D74300C62F16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F22E7F482962D74300C62F16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F22E7F492962D74300C62F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F22E7F4B2962D74300C62F16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B021A7D8780DE5E93A1565 /* Pods-CreditCardList.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardList/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F22E7F4C2962D74300C62F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0DB88343D21F3C73C917CD /* Pods-CreditCardList.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardList/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F22E7F4E2962D74300C62F16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1A3761EA58271726744A917 /* Pods-CreditCardListTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditCardList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CreditCardList";
+			};
+			name = Debug;
+		};
+		F22E7F4F2962D74300C62F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD5C8A38CBD78C9F1657B7D /* Pods-CreditCardListTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditCardList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CreditCardList";
+			};
+			name = Release;
+		};
+		F22E7F512962D74300C62F16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961EC1B1E97F0F90DF229B57 /* Pods-CreditCardList-CreditCardListUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CreditCardList;
+			};
+			name = Debug;
+		};
+		F22E7F522962D74300C62F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F90DEBB95C2BAA5C708D1AD /* Pods-CreditCardList-CreditCardListUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QCSG92KD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditCardListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CreditCardList;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F22E7F1B2962D74100C62F16 /* Build configuration list for PBXProject "CreditCardList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22E7F482962D74300C62F16 /* Debug */,
+				F22E7F492962D74300C62F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22E7F4A2962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22E7F4B2962D74300C62F16 /* Debug */,
+				F22E7F4C2962D74300C62F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22E7F4D2962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22E7F4E2962D74300C62F16 /* Debug */,
+				F22E7F4F2962D74300C62F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22E7F502962D74300C62F16 /* Build configuration list for PBXNativeTarget "CreditCardListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22E7F512962D74300C62F16 /* Debug */,
+				F22E7F522962D74300C62F16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F22E7F182962D74100C62F16 /* Project object */;
+}
