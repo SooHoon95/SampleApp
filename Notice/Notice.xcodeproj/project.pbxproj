@@ -22,6 +22,7 @@
 		F2F49820296557D3000320CE /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4981E296557D3000320CE /* NoticeViewController.swift */; };
 		F2F49821296557D3000320CE /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F4981F296557D3000320CE /* NoticeViewController.xib */; };
 		F2F498232965653D000320CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2F498222965653D000320CE /* GoogleService-Info.plist */; };
+		F2F4982529669C08000320CE /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2F4982429669C08000320CE /* RemoteConfigDefaults.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		F2F4981E296557D3000320CE /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		F2F4981F296557D3000320CE /* NoticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 		F2F498222965653D000320CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2F4982429669C08000320CE /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		FDEC0638B5F4349F19DE5DF2 /* Pods_Notice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,7 +109,6 @@
 				58650DA3A6F752BDAB74383B /* Pods-NoticeTests.debug.xcconfig */,
 				393981A644635AB13B081F36 /* Pods-NoticeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,6 +140,7 @@
 				F2F497EA2965547C000320CE /* AppDelegate.swift */,
 				F2F497EC2965547C000320CE /* SceneDelegate.swift */,
 				F2F497EE2965547C000320CE /* ViewController.swift */,
+				F2F4982429669C08000320CE /* RemoteConfigDefaults.plist */,
 				F2F497F02965547C000320CE /* Main.storyboard */,
 				F2F497F32965547E000320CE /* Assets.xcassets */,
 				F2F497F52965547E000320CE /* LaunchScreen.storyboard */,
@@ -286,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F4982529669C08000320CE /* RemoteConfigDefaults.plist in Resources */,
 				F2F49821296557D3000320CE /* NoticeViewController.xib in Resources */,
 				F2F497F72965547E000320CE /* LaunchScreen.storyboard in Resources */,
 				F2F498232965653D000320CE /* GoogleService-Info.plist in Resources */,
