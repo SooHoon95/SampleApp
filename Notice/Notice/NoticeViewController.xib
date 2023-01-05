@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeViewController" customModule="Notice" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="ejo-us-k14" id="Krp-O3-KjS"/>
+                <outlet property="detailLabel" destination="cza-AT-rHP" id="UJr-bb-JkD"/>
+                <outlet property="noticeView" destination="81I-Vb-1fs" id="EDO-2Q-WCU"/>
+                <outlet property="titleLabel" destination="NbI-lY-vec" id="3b1-G9-rIf"/>
+                <outlet property="view" destination="COL-KN-4LR" id="urK-yS-bvm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="COL-KN-4LR">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81I-Vb-1fs">
+                    <rect key="frame" x="45" y="228.66666666666663" width="300" height="400"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-cF-cP2">
+                            <rect key="frame" x="20" y="20" width="260" height="360"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqu-0K-oQg">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="35.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내 드립니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbI-lY-vec">
+                                    <rect key="frame" x="0.0" y="45.333333333333336" width="260" height="71.333333333333314"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 이용에 참고 부탁드립니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="cza-AT-rHP">
+                                    <rect key="frame" x="0.0" y="126.66666666666667" width="260" height="35.666666666666671"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점검 일시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5j-OY-FMG">
+                                    <rect key="frame" x="0.0" y="172.33333333333334" width="260" height="31.666666666666657"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 1월 31일(월) 00: 00-03:00(3시간)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-us-k14">
+                                    <rect key="frame" x="0.0" y="214.00000000000003" width="260" height="75.999999999999972"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anl-nI-oqa">
+                                    <rect key="frame" x="0.0" y="300" width="260" height="60"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="xgr-VF-c3c"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="확인">
+                                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="qw7-Qy-aKl"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Anl-nI-oqa" firstAttribute="top" secondItem="ejo-us-k14" secondAttribute="bottom" constant="10" id="p0U-Dz-94d"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ibZ-cF-cP2" secondAttribute="bottom" constant="20" id="HLB-SZ-2H6"/>
+                        <constraint firstAttribute="trailing" secondItem="ibZ-cF-cP2" secondAttribute="trailing" constant="20" id="KND-RU-raN"/>
+                        <constraint firstAttribute="height" constant="400" id="QxJ-1M-64m"/>
+                        <constraint firstItem="ibZ-cF-cP2" firstAttribute="leading" secondItem="81I-Vb-1fs" secondAttribute="leading" constant="20" id="T4v-86-KzJ"/>
+                        <constraint firstItem="ibZ-cF-cP2" firstAttribute="top" secondItem="81I-Vb-1fs" secondAttribute="top" constant="20" id="Y5e-CG-V1y"/>
+                        <constraint firstAttribute="width" constant="300" id="gmn-0E-a0L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="SyC-EG-mlT"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="81I-Vb-1fs" firstAttribute="centerX" secondItem="SyC-EG-mlT" secondAttribute="centerX" id="5GI-8R-hyr"/>
+                <constraint firstItem="81I-Vb-1fs" firstAttribute="centerY" secondItem="SyC-EG-mlT" secondAttribute="centerY" id="Mmf-vV-kqU"/>
+            </constraints>
+            <point key="canvasLocation" x="142" y="18"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
