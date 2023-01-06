@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // 알림에 대한 설정하기
-        var userNotificationCenter: UNUserNotificationCenter?
+        UNUserNotificationCenter.current().delegate = self
         
         let authoriazationOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
-        userNotificationCenter?.requestAuthorization(options: authoriazationOptions) { _, error in
+        userNotificationCenter.requestAuthorization(options: authoriazationOptions) { _, error in
             if let error = error {
                 print("Error: notification authorization request \(error.localizedDescription)")
             }
