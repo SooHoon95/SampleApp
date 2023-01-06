@@ -20,6 +20,7 @@
 		F2F498672966F095000320CE /* AlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F498652966F095000320CE /* AlertListCell.xib */; };
 		F2F498692966F220000320CE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F498682966F220000320CE /* Alert.swift */; };
 		F2F4986B2966FA51000320CE /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4986A2966FA51000320CE /* AddAlertViewController.swift */; };
+		F2F4986D2967B897000320CE /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4986C2967B897000320CE /* UNNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F2F498652966F095000320CE /* AlertListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListCell.xib; sourceTree = "<group>"; };
 		F2F498682966F220000320CE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F2F4986A2966FA51000320CE /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
+		F2F4986C2967B897000320CE /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F2F498382966EEAB000320CE /* Main.storyboard */,
 				F2F4986A2966FA51000320CE /* AddAlertViewController.swift */,
 				F2F498642966F095000320CE /* AlertListCell.swift */,
+				F2F4986C2967B897000320CE /* UNNotificationCenter.swift */,
 				F2F498652966F095000320CE /* AlertListCell.xib */,
 				F2F4983B2966EEAD000320CE /* Assets.xcassets */,
 				F2F4983D2966EEAD000320CE /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				F2F498352966EEAB000320CE /* SceneDelegate.swift in Sources */,
 				F2F498662966F095000320CE /* AlertListCell.swift in Sources */,
 				F2F498692966F220000320CE /* Alert.swift in Sources */,
+				F2F4986D2967B897000320CE /* UNNotificationCenter.swift in Sources */,
 				F2F498632966EEC8000320CE /* AlertListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
