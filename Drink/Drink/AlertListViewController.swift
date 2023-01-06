@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlertListViewController: UITableViewController {
     
     var alerts: [Alert] = []
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +38,15 @@ class AlertListViewController: UITableViewController {
             let newAlert = Alert(date: date, isOn: true)
             
             alertList.append(newAlert)  // 생성된 데이터를 리스트에 더해준다.
-            alertList.sorted { $0.date < $1.date } // 시간순서대로
+            alertList.sorted{ $0.date < $1.date } // 시간순서대로
             
             
             self.alerts = alertList     // 새로운 리스트로 덮어쓰기
             // userDefaults에 새로운 값 다시 넣어주기
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts") // 인코딩
+            // noti 추가
+            self.userNotificationCenter.addNotificationRequest(by: newAlert)
+            
             self.tableView.reloadData() // 테이블 뷰 리로드
         }
         
@@ -102,6 +107,8 @@ extension AlertListViewController {
             // notification 삭제 구현
             self.alerts.remove(at: indexPath.row)   // 해당 로우에 데이터 삭제
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts") // 지워준 리스트를 다시 덮어씌운다.
+            
+            userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[indexPath.row].id] )    // 특정 아이디에 해당하는 것 중 아직 보내지 않고 펜딩 돼있는것을 삭제할 것이기 때문에
             self.tableView.reloadData()
             return
         default:

@@ -9,7 +9,8 @@ import Foundation
 import UserNotifications
 
 extension UNUserNotificationCenter {
-        // alert 객체 받아서 노티를 만들고 최종적으로 노티피케이션 센터에 추가하는 함수
+    
+    // alert 객체 받아서 노티를 만들고 최종적으로 노티피케이션 센터에 추가하는 함수
     func addNotificationRequest(by alert: Alert) {
         let content = UNMutableNotificationContent()
         content.title = "물 마실 시간이에요💦"
@@ -20,5 +21,11 @@ extension UNUserNotificationCenter {
         // Trigger 설정
         let component = Calendar.current.dateComponents([.hour,.minute], from: alert.date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: component, repeats: alert.isOn)// 날짜 상관없이 시간이랑 분만 필요하다 여기서는 // repeat 여부는 스위치 값에 따라 달라지게한다.
+        
+        // Request 설정
+        let request = UNNotificationRequest(identifier: alert.id, content: content, trigger: trigger)
+        
+        self.add(request, withCompletionHandler: nil)
     }
 }
+
