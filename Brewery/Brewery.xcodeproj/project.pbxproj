@@ -12,15 +12,15 @@
 		BD22CF8229854C45001603CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD22CF8129854C45001603CA /* Assets.xcassets */; };
 		BD22CF8529854C45001603CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD22CF8329854C45001603CA /* LaunchScreen.storyboard */; };
 		BD22CF8D29854CA4001603CA /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22CF8C29854CA4001603CA /* BeerListViewController.swift */; };
-		BD22CF9129854DF2001603CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD22CF9029854DF2001603CA /* Kingfisher */; };
-		BD22CF9429854EBE001603CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD22CF9329854EBE001603CA /* SnapKit */; };
-		BD22CF9629854EBE001603CA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = BD22CF9529854EBE001603CA /* SnapKit-Dynamic */; };
 		BD22CF9829854F10001603CA /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22CF9729854F10001603CA /* Beer.swift */; };
 		BD22CF9A29855359001603CA /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22CF9929855359001603CA /* BeerListCell.swift */; };
 		BD22CF9C298559DA001603CA /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22CF9B298559DA001603CA /* BeerDetailViewController.swift */; };
+		FA2664EB7193E2EC1CFCCD6B /* Pods_Brewery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0444CBE2E7915DF5CC7D998 /* Pods_Brewery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C34FDB0A62CFEE40F4F943B /* Pods-Brewery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery.release.xcconfig"; path = "Target Support Files/Pods-Brewery/Pods-Brewery.release.xcconfig"; sourceTree = "<group>"; };
+		8705B8B4C9B49BDBCF52E6D2 /* Pods-Brewery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery.debug.xcconfig"; path = "Target Support Files/Pods-Brewery/Pods-Brewery.debug.xcconfig"; sourceTree = "<group>"; };
 		BD22CF7529854C44001603CA /* Brewery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD22CF7829854C44001603CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD22CF7A29854C44001603CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +31,7 @@
 		BD22CF9729854F10001603CA /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		BD22CF9929855359001603CA /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
 		BD22CF9B298559DA001603CA /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
+		C0444CBE2E7915DF5CC7D998 /* Pods_Brewery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,20 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD22CF9129854DF2001603CA /* Kingfisher in Frameworks */,
-				BD22CF9429854EBE001603CA /* SnapKit in Frameworks */,
-				BD22CF9629854EBE001603CA /* SnapKit-Dynamic in Frameworks */,
+				FA2664EB7193E2EC1CFCCD6B /* Pods_Brewery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23F8BCFD35BEA0762438259C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8705B8B4C9B49BDBCF52E6D2 /* Pods-Brewery.debug.xcconfig */,
+				1C34FDB0A62CFEE40F4F943B /* Pods-Brewery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BD22CF6C29854C44001603CA = {
 			isa = PBXGroup;
 			children = (
 				BD22CF7729854C44001603CA /* Brewery */,
 				BD22CF7629854C44001603CA /* Products */,
+				23F8BCFD35BEA0762438259C /* Pods */,
+				FDEF73E83D5BF5FCC53E5BFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +89,14 @@
 			path = Brewery;
 			sourceTree = "<group>";
 		};
+		FDEF73E83D5BF5FCC53E5BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0444CBE2E7915DF5CC7D998 /* Pods_Brewery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,20 +104,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD22CF8929854C45001603CA /* Build configuration list for PBXNativeTarget "Brewery" */;
 			buildPhases = (
+				F025C6F4222DC931D20A4636 /* [CP] Check Pods Manifest.lock */,
 				BD22CF7129854C44001603CA /* Sources */,
 				BD22CF7229854C44001603CA /* Frameworks */,
 				BD22CF7329854C44001603CA /* Resources */,
+				111AD016E7614D647AA8A850 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Brewery;
-			packageProductDependencies = (
-				BD22CF9029854DF2001603CA /* Kingfisher */,
-				BD22CF9329854EBE001603CA /* SnapKit */,
-				BD22CF9529854EBE001603CA /* SnapKit-Dynamic */,
-			);
 			productName = Brewery;
 			productReference = BD22CF7529854C44001603CA /* Brewery.app */;
 			productType = "com.apple.product-type.application";
@@ -128,10 +143,6 @@
 				Base,
 			);
 			mainGroup = BD22CF6C29854C44001603CA;
-			packageReferences = (
-				BD22CF8F29854DF2001603CA /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				BD22CF9229854EBE001603CA /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = BD22CF7629854C44001603CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,6 +163,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		111AD016E7614D647AA8A850 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brewery/Pods-Brewery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brewery/Pods-Brewery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brewery/Pods-Brewery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F025C6F4222DC931D20A4636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Brewery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD22CF7129854C44001603CA /* Sources */ = {
@@ -297,6 +350,7 @@
 		};
 		BD22CF8A29854C45001603CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8705B8B4C9B49BDBCF52E6D2 /* Pods-Brewery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,7 +361,6 @@
 				INFOPLIST_FILE = Brewery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,6 +378,7 @@
 		};
 		BD22CF8B29854C45001603CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C34FDB0A62CFEE40F4F943B /* Pods-Brewery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -335,7 +389,6 @@
 				INFOPLIST_FILE = Brewery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,43 +426,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BD22CF8F29854DF2001603CA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-		BD22CF9229854EBE001603CA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BD22CF9029854DF2001603CA /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD22CF8F29854DF2001603CA /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		BD22CF9329854EBE001603CA /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD22CF9229854EBE001603CA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		BD22CF9529854EBE001603CA /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD22CF9229854EBE001603CA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD22CF6D29854C44001603CA /* Project object */;
 }

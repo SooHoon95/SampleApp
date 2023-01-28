@@ -1,0 +1,6 @@
+framework module Pods_Brewery {
+  umbrella header "Pods-Brewery-umbrella.h"
+
+  export *
+  module * { export * }
+}
