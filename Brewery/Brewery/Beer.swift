@@ -10,7 +10,7 @@ import Foundation
 // 내가 data를 다시 서버로 전달할 일 없음. 읽기만 하면 됌
 struct Beer: Decodable {
     let id: Int?
-    let name, taglineString, description, brewersTips, imageURL: String?
+    let name, taglineString, description, brewersTips, imageURL: String?
     let foodPairing: [String]?
     
     // tag String 변경

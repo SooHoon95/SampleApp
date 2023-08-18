@@ -20,7 +20,7 @@ class BeerListViewController : UITableViewController {
         
         //UiNavigationBar
         
-        title = "패캠브루어리"
+        title = "Brewery"
         navigationController?.navigationBar.prefersLargeTitles = true // 큰 타이틀 형태
         
         //UITableView 설정
@@ -61,6 +61,8 @@ extension BeerListViewController: UITableViewDataSourcePrefetching {
         self.show(detailViewContoller, sender: nil)
     }
     
+    
+    // prefetching
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
             guard currentPage != 1 else { return } // 최소 2번째 부터 불러온다.
         
@@ -78,7 +80,7 @@ private extension BeerListViewController {
     
     func fetchBeer(of page: Int) {
         guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)"),
-        dataTasks.firstIndex(where: { $0.originalRequest?.url == url }) == nil // 한번이라도 들어왔던 url 이라면 false 리턴한다.
+        dataTasks.firstIndex(where: { $0.originalRequest?.url == url }) == nil // 한번이라도 들어왔던 url 이라면 false 리턴한다
         else { return }
         
         var request = URLRequest(url: url)
@@ -97,7 +99,7 @@ private extension BeerListViewController {
             case (200...299):   // 성공
                 self.beerList += beers  // 배열에 넣기
                 self.currentPage += 1 // page 올리기
-
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
